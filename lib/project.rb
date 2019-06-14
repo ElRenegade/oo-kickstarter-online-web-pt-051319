@@ -1,3 +1,5 @@
+require "pry"
+
 class Project
   attr_accessor:backers
   attr_reader :title
@@ -7,7 +9,8 @@ class Project
   end
 
   def add_backer(backer)
-    @backers << backer
+    binding.pry
+    backers << backer
     backer.backed_projects << self
   end
 
